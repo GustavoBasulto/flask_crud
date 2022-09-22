@@ -1,0 +1,9 @@
+.container{
+    margin-top:  20px;
+}
+.form{
+    align-items: center;
+    background-color: rgb(143, 149, 152);
+    margin-left: 0px auto;
+    padding: 15px;
+}
