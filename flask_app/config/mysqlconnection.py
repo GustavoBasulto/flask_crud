@@ -1,4 +1,3 @@
-
 import pymysql.cursors
 
 class MySQLConnection:
