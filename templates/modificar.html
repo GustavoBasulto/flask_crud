@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block titulo %}Modificar usuario{% endblock %}
+
+{% block contenido %}
+{% include '__menu.html' %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <form action="/actualizar/procesar/{{usuario.id}}" method="POST">
+            <div class="form-group ">
+                <h2>Modificar usuario {{usuario.id}}</h2>
+            </div>
+            <div class="form-group ">
+                <label for="nombre">Nombre:</label>
+                <input  class="form-control" type="text" name="nombre" value="{{usuario.nombre}}">
+            </div>
+            <div class="form-group">    
+                <label for="apellido">Apellido:</label>
+                <input class="form-control" type="text" name="apellido" value="{{usuario.apellido}}">
+            </div>
+            <div class="form-group">
+                <label for="mail" >Email:</label>
+                <input class="form-control" type="email" name="mail" value="{{usuario.mail}}">
+            </div>
+            <input class="btn btn-primary" type="submit" value="modificar">
+            <a class="btn btn-info" href="/usuarios/{{usuario.id}}" >Mostrar usuario</a>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
